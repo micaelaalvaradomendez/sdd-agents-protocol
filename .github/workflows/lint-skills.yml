@@ -1,0 +1,30 @@
+name: Lint Skills & Constitution
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Make scripts executable
+        run: chmod +x scripts/*.sh
+
+      - name: Validate skills structure and YAML frontmatter
+        run: ./scripts/validate-skills.sh
+
+      - name: Verify Constitution is up to date
+        run: |
+          ./scripts/sync-constitution.sh
+          if ! git diff --quiet CONSTITUCION.md; then
+            echo "Error: CONSTITUCION.md no está sincronizada con las skills." >&2
+            echo "Ejecute ./scripts/sync-constitution.sh y haga commit de los cambios." >&2
+            git diff CONSTITUCION.md
+            exit 1
+          fi
