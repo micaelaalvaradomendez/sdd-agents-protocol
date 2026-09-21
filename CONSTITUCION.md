@@ -1,6 +1,6 @@
 # Constitución del Proyecto: Catálogo Normativo de Skills
 <!-- ESTE ARCHIVO ES AUTOGENERADO. NO EDITAR DIRECTAMENTE. -->
-<!-- Regenerar con: ./scripts/sync-constitution.sh -->
+<!-- Regenerar con: ./sdd sync -->
 
 > **Regla de Oro**: Si una capacidad, procedimiento o invariante no está reflejada
 > en una skill catalogada en esta Constitución, **no existe como estándar oficial**.
@@ -22,5 +22,5 @@
 ## Invariantes de la Constitución
 
 1. **Obligatoriedad**: Todo agente debe consultar este índice durante la fase *Discovery* del SOP v2.
-2. **Sincronización**: Toda modificación o creación de una skill exige ejecutar `./scripts/sync-constitution.sh`.
+2. **Sincronización**: Toda modificación o creación de una skill exige ejecutar `./sdd sync`.
 3. **Total de habilidades indexadas**: 5
