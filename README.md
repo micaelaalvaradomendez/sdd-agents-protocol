@@ -90,33 +90,39 @@ cd sdd-agents-protocol
 
 ---
 
-## 📂 Mapa de Estructura del Repositorio
+## 📂 Mapa de Arquitectura del Repositorio
+
+La raíz del proyecto se mantiene **100% limpia y desacoplada** de la lógica de producto, encapsulando toda la maquinaria en `.agents/`:
 
 ```
 sdd-agents-protocol/
-├── AGENTS.md                  # SSoT operativa maestra (Jerarquía, Invariantes D0-D4)
-├── CONSTITUCION.md            # Índice normativo autogenerado de skills activas
-├── SESSION_LOCK.md            # Control de sesiones concurrentes y exclusión mutua
-├── ANTI-PATTERNS.md           # Catálogo formal de anti-patrones indexados (AP-01..)
-├── DECISIONS-INDEX.md         # Índice central de Architecture Decision Records
-├── MIGRATION.md               # Guía paso a paso para adoptar SDD en repositorios
-├── LICENSE                    # Licencia MIT
+├── sdd                       # ⚡ CLI unificado y autosuficiente (lock, check, sync, adr)
+├── .cursorrules              # 🤖 Auto-conector mandatorio para Cursor IDE
+├── CLAUDE.md                 # 🤖 Auto-conector mandatorio para Claude Code
+├── README.md                 # 📄 Presentación y guía del framework
+├── LICENSE                   # 📄 Licencia MIT
 ├── .github/
-│   ├── copilot-instructions.md# Protocolo de inicio de 5 pasos para Copilot/Cursor/AGY
+│   ├── copilot-instructions.md# 🤖 Auto-conector para GitHub Copilot
 │   └── workflows/
-│       └── lint-skills.yml    # CI: Validador de frontmatter YAML y drift en PRs
-├── contexto/                  # Información global de negocio modularizada (SDS-500)
-├── skills/                    # Habilidades modulares (creador, revisor, auditor, etc.)
-├── agentes/                   # Definición de roles compuestos con Quality Gates
-├── RULES/                     # Reglas duras [!CAUTION] de persistencia, seguridad e IA
-├── DECISIONS/                 # ADRs fechados (YYYY-MM-DD-titulo.md)
-├── MAPS/                      # Topografía arquitectónica viva y diagramas Mermaid
-├── workflows/                 # Procedimientos operativos (SOP v2, incidentes, KB)
-├── checklists/                # Listas de control de pre-commit, migración y pre-release
-├── templates/                 # Plantillas listas para usar (Skills, Agentes, ADRs)
-├── scripts/                   # Utilidades en POSIX Bash (bootstrap, sync, validate, new)
-├── examples/                  # Casos reales anonimizados (contexto, skill vertical)
-└── docs/                      # Documentación conceptual profunda y patrones
+│       └── lint-skills.yml   # 🔍 CI: Validación de skills y drift con ./sdd check
+│
+└── .agents/                  # 🛡️ MOTOR DEL PROTOCOLO (Encapsulado)
+    ├── AGENTS.md             # SSoT operativa maestra (Jerarquía e Invariantes)
+    ├── CONSTITUCION.md       # Catálogo vivo autogenerado de skills
+    ├── SESSION_LOCK.md       # Control atómico de concurrencia
+    ├── ANTI-PATTERNS.md      # Catálogo formal de anti-patrones indexados
+    ├── DECISIONS-INDEX.md    # Índice central de Architecture Decision Records
+    ├── context/              # Contexto global consolidado (CONTEXTO.md)
+    ├── skills/               # Habilidades modulares con frontmatter YAML
+    ├── roles/                # Perfiles de agentes compuestos con Quality Gates
+    ├── rules/                # Reglas duras inquebrantables [!CAUTION]
+    ├── workflows/            # Procedimientos operativos (SOP v2, incidentes, KB)
+    ├── checklists/           # Listas de control de pre-commit, migración y pre-release
+    ├── maps/                 # Topografía arquitectónica viva y diagramas Mermaid
+    ├── templates/            # Plantillas estandarizadas (Skills, Agentes, ADRs)
+    ├── data/                 # Matrices agnósticas (detección de stack y vulnerabilidades)
+    ├── docs/                 # Documentación conceptual profunda y MIGRATION.md
+    └── examples/             # Casos reales anonimizados (contexto, skill vertical)
 ```
 
 ---
