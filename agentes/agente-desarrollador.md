@@ -56,3 +56,4 @@ Salida: Código con tipos Go/TypeScript, transacción ACID explícita, registro 
 
 ## 13. Historial de Cambios (Changelog)
 - **v1.0.0 (2026-09-20)**: Creación inicial del perfil operativo de desarrollo.
+

@@ -31,3 +31,4 @@ Análisis histórico y lecciones aprendidas en la evolución desde simples instr
   - **Gobernanza de Concurrencia**: Control explícito de sesiones concurrentes mediante `SESSION_LOCK.md`.
   - **Validación Automatizada en CI**: Linter estricto de skills (`validate-skills.sh`) que bloquea pull requests ante drift de estándares o frontmatter inválido.
   - **Auditoría y Trazabilidad**: Convención formal `@ai-gen` y catálogo de anti-patrones indexados (`AP-01`..`AP-15`).
+

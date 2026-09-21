@@ -50,3 +50,4 @@ Descripción del escenario y snippet de invocación/resultado.
 - [ ] Invariantes de dominio cumplidos.
 - [ ] Código o artefacto etiquetado con `// @ai-gen`.
 - [ ] Tests automáticos ejecutados y en verde.
+

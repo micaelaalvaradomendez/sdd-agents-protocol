@@ -92,3 +92,4 @@ flowchart LR
 
 ## 4. Política de Mantenimiento
 - Este archivo se actualiza obligatoriamente en el paso 4 (*Closing*) del SOP v2 cuando se añade un nuevo módulo o se altera la interacción entre subsistemas.
+

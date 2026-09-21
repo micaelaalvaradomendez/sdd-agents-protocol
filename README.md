@@ -45,6 +45,8 @@ Este framework desacopla el conocimiento en tres niveles de abstracción articul
 ---
 
 ## 📊 Métricas del Framework
+- **CLI Unificado de Productividad**: `./scripts/sdd` (`lock`, `unlock`, `status`, `check`, `sync`, `adr`, `detect`, `hook`).
+- **Matrices Agnósticas Basadas en Datos**: Detección de stacks y patrones de vulnerabilidades multitecnología en `data/`.
 - **5 Habilidades Base Catalogadas**: Meta-habilidades, revisión de código, auditoría vertical de seguridad, detector agnóstico de stack y redactor de decisiones.
 - **12 Anti-Patrones Indexados**: Catálogo formal con IDs (`AP-01` a `AP-12`), DO/DON'T y severidades 🔴/🟡.
 - **7 Reglas Duras Inquebrantables**: Persistencia transaccional, prohibición de borrado físico directo, etiquetado `@ai-gen` mandatorio y cero secretos.
@@ -57,22 +59,33 @@ Este framework desacopla el conocimiento en tres niveles de abstracción articul
 
 ### 1. Inicializar en un nuevo repositorio
 ```bash
-# Clonar el framework y ejecutar el instalador
 git clone https://github.com/micaelaalvaradomendez/sdd-agents-protocol.git
 cd sdd-agents-protocol
-./scripts/bootstrap.sh --target /ruta/a/mi-proyecto --project "mi-proyecto"
+./scripts/sdd init /ruta/a/mi-proyecto
 ```
 
-### 2. Validar habilidades y regenerar la constitución
+### 2. Bloqueo y desbloqueo de sesiones sin fricción
 ```bash
-# En el repositorio destino:
-./scripts/validate-skills.sh
-./scripts/sync-constitution.sh
+# Adquirir sesión concurrente antes de editar un módulo
+./scripts/sdd lock "orders/service" "Implementar transaccionalidad outbox" "Agent-Dev"
+
+# Comprobar estado de locks activos
+./scripts/sdd status
+
+# Liberar la sesión al terminar
+./scripts/sdd unlock
 ```
 
-### 3. Crear una nueva Decisión de Arquitectura (ADR)
+### 3. Validar repositorio y detectar stack
 ```bash
-./scripts/new-decision.sh "Adopción de UUIDv7 en Tablas Maestras"
+# Validar skills y constitución viva
+./scripts/sdd check
+
+# Detectar stack tecnológico de forma agnóstica
+./scripts/sdd detect
+
+# Instalar pre-commit hook de Git
+./scripts/sdd hook install
 ```
 
 ---

@@ -13,3 +13,4 @@ Lista de control obligatoria antes de aplicar migraciones de esquema o cambios e
 - [ ] **Permisos de Rol**: Se verificaron los permisos mínimos de base de datos (evitar usuario `postgres` o `root` en la aplicación).
 - [ ] **Protección de Datos Personales / Sensibles**: Los datos confidenciales cuentan con cifrado o enmascaramiento documentado.
 - [ ] **Plan de Rollback Probado**: Existe un procedimiento documentado para restaurar el estado previo en caso de falla.
+

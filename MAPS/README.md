@@ -5,3 +5,4 @@ Este directorio contiene los mapas conceptuales y topográficos del proyecto. Si
 ## Estructura
 - `ATLAS-TEMPLATE.md`: Plantilla viva de topografía con diagramas Mermaid embebidos.
 - Mapas específicos por subsistema o flujos de datos.
+

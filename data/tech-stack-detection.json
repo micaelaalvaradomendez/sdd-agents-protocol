@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TechStackDetectionMatrix",
+  "description": "Universal indicator files, package managers, and configuration paths for technology stack detection.",
+  "stacks": {
+    "nodejs": {
+      "name": "Node.js / TypeScript",
+      "indicator_files": ["package.json", "tsconfig.json", "pnpm-lock.yaml", "yarn.lock", "package-lock.json"],
+      "manifest_file": "package.json",
+      "lock_files": ["pnpm-lock.yaml", "yarn.lock", "package-lock.json"],
+      "default_source_ext": [".ts", ".js", ".tsx", ".jsx", ".mjs"],
+      "test_frameworks": ["vitest", "jest", "mocha", "playwright"],
+      "linters": ["eslint", "biome", "prettier"]
+    },
+    "go": {
+      "name": "Go (Golang)",
+      "indicator_files": ["go.mod", "go.sum"],
+      "manifest_file": "go.mod",
+      "lock_files": ["go.sum"],
+      "default_source_ext": [".go"],
+      "test_frameworks": ["testing", "testify", "ginkgo"],
+      "linters": ["golangci-lint", "staticcheck", "govet"]
+    },
+    "python": {
+      "name": "Python",
+      "indicator_files": ["pyproject.toml", "requirements.txt", "Pipfile", "setup.py", "poetry.lock"],
+      "manifest_file": "pyproject.toml",
+      "lock_files": ["poetry.lock", "Pipfile.lock", "requirements.lock"],
+      "default_source_ext": [".py"],
+      "test_frameworks": ["pytest", "unittest"],
+      "linters": ["ruff", "flake8", "black", "mypy"]
+    },
+    "rust": {
+      "name": "Rust",
+      "indicator_files": ["Cargo.toml", "Cargo.lock"],
+      "manifest_file": "Cargo.toml",
+      "lock_files": ["Cargo.lock"],
+      "default_source_ext": [".rs"],
+      "test_frameworks": ["cargo test"],
+      "linters": ["clippy", "rustfmt"]
+    },
+    "php": {
+      "name": "PHP",
+      "indicator_files": ["composer.json", "composer.lock"],
+      "manifest_file": "composer.json",
+      "lock_files": ["composer.lock"],
+      "default_source_ext": [".php"],
+      "test_frameworks": ["phpunit", "pest"],
+      "linters": ["phpstan", "psalm", "php-cs-fixer"]
+    },
+    "java": {
+      "name": "Java / Kotlin",
+      "indicator_files": ["pom.xml", "build.gradle", "build.gradle.kts"],
+      "manifest_file": "pom.xml",
+      "lock_files": ["gradle.lockfile"],
+      "default_source_ext": [".java", ".kt"],
+      "test_frameworks": ["junit", "testng"],
+      "linters": ["checkstyle", "spotbugs", "ktlint"]
+    }
+  }
+}

@@ -5,3 +5,4 @@
 - **Operador de Soporte**: Permisos de solo lectura ampliada para diagnóstico de incidencias, sin acceso a credenciales o datos financieros brutos.
 - **Administrador del Sistema**: Gestión de roles, parámetros de configuración y monitoreo del estado del sistema.
 - **Auditor de Seguridad / Cumplimiento**: Acceso directo e inmutable a bitácoras de auditoría (`sys_audit_outbox`) y registros de eventos.
+

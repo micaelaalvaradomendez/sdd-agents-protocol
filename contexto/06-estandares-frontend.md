@@ -11,3 +11,4 @@
 ## 2. Accesibilidad y Calidad
 - Cumplimiento de WCAG 2.1 nivel AA (contraste de colores, etiquetas ARIA, navegación completa por teclado).
 - Tipado estricto en props de componentes y contratos de datos recibidos del backend.
+

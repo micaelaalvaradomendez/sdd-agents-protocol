@@ -9,3 +9,4 @@ Este directorio contiene la información fundacional de dominio que los agentes 
 - `04-regulaciones.md`: Marcos legales o normativos aplicables (GDPR, SOC2, PCI-DSS).
 - `05-audiencias.md`: Segmentación de usuarios y arquetipos de interacción.
 - `06-estandares-frontend.md`: Directivas de diseño de interfaz, accesibilidad y componentes.
+

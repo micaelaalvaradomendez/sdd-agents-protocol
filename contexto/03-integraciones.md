@@ -8,3 +8,4 @@
 ## 2. Invariantes de Integración
 - Timeout explícito mandatorio en todos los clientes HTTP (máximo 5 segundos por defecto).
 - Reintentos con retroceso exponencial (*exponential backoff*) y jitter para mitigar tormentas de reintentos.
+

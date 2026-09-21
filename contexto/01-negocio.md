@@ -11,3 +11,4 @@ Proveer una plataforma confiable, escalable y transaccional para la gestión int
 ## 3. Modelo Operativo
 - **Servicios Core**: Procesamiento transaccional de órdenes, registro de usuarios y control de acceso.
 - **Workers Asíncronos**: Despacho de eventos, notificaciones y procesamiento por lotes vía cola outbox.
+

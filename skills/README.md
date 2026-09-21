@@ -21,3 +21,4 @@ criticality: high | medium | low
 - Para crear una nueva habilidad, utilizar la meta-habilidad `creador-habilidades` o la plantilla en `templates/SKILL-TEMPLATE.md`.
 - Toda habilidad debe validarse con `./scripts/validate-skills.sh`.
 - La lista oficial se sincroniza en `CONSTITUCION.md` mediante `./scripts/sync-constitution.sh`.
+

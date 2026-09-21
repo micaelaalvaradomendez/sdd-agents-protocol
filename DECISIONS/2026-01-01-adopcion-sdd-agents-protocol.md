@@ -32,3 +32,4 @@ Se adopta la **Opción 2**: Implementación del estándar SDD con Círculo Virtu
 
 ## 5. Validación y Calidad
 - Integración en CI (`lint-skills.yml`) que rechaza PRs con skills mal formateadas o constitución desactualizada.
+

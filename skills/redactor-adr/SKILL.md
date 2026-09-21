@@ -58,3 +58,4 @@ Invocación tras debate técnico sobre particionamiento:
 - [ ] Contexto y alternativas exhaustivamente documentados.
 - [ ] Consecuencias y compromisos técnicos declarados.
 - [ ] `DECISIONS-INDEX.md` verificado.
+

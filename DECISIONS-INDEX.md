@@ -11,3 +11,4 @@ Este índice registra todas las decisiones estructurales y técnicas formales to
 ---
 
 *Para registrar una nueva decisión, ejecutar:* `./scripts/new-decision.sh "Título de la decisión"`
+

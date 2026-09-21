@@ -60,3 +60,4 @@ Invocación para crear una nueva habilidad de compresión:
 - [ ] Frontmatter YAML completo y sin advertencias.
 - [ ] `./scripts/validate-skills.sh` ejecutado con resultado exitoso.
 - [ ] `./scripts/sync-constitution.sh` ejecutado y reflejado en `CONSTITUCION.md`.
+

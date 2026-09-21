@@ -10,3 +10,4 @@ Este directorio define los perfiles formales de los agentes de IA que operan en 
 
 ## Reglas de Concurrencia
 Todo agente en operación debe registrar su estado en `SESSION_LOCK.md` antes de modificar código o documentación.
+

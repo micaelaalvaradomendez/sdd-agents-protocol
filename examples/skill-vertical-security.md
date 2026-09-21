@@ -73,3 +73,4 @@ func TestServeDocument_PreventsPathTraversal(t *testing.T) {
 ## 5. Cierre del Bucle (Knowledge Loop)
 1. **Regla de Seguridad**: Se verifica que `SECURITY-RULES.md` contemple explícitamente el saneamiento de rutas en descargas de archivos.
 2. **Quality Gate**: El test automatizado se incorpora a la suite de CI evitando regresiones futuras.
+

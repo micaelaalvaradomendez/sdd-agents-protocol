@@ -23,3 +23,4 @@ Protocolo de contingencia y rollback rápido cuando una acción asistida por IA 
 1. **Actualización de Normativa**: Si el incidente reveló un nuevo caso de borde, redactar la regla o anti-patrón en la misma sesión.
 2. **Nuevo Test de Regresión**: Incorporar una prueba automatizada que reproduzca el defecto para garantizar que nunca vuelva a ocurrir.
 3. **Liberación**: Actualizar `SESSION_LOCK.md` a `✅ Liberado`.
+

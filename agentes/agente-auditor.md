@@ -55,3 +55,4 @@ Salida: Inspección de endpoints, confirmación de validación de tokens y repor
 
 ## 13. Historial de Cambios (Changelog)
 - **v1.0.0 (2026-09-20)**: Definición del perfil de auditoría y seguridad.
+

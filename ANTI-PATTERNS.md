@@ -114,3 +114,4 @@ Catálogo normativo de prácticas defectuosas, riesgosas o arquitectónicamente 
 | `AP-10` | Falta de Atribución `@ai-gen` | Gobierno IA | 🟡 Advertencia | Trazabilidad / Auditoría |
 | `AP-11` | Alucinación de Dependencias | Gobierno IA | 🔴 Crítica | Integridad del Build / SecOps |
 | `AP-12` | Ejecución sin Skill/Rol | Gobierno IA | 🟡 Advertencia | Calidad / Consistencia |
+

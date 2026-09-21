@@ -42,3 +42,4 @@ Se define un mapa de equivalencias conceptuales:
 
 ### D. Salida Estructurada Normalizada
 La habilidad emite el resultado en un formato universal JSON o Markdown estructurado, permitiendo que cualquier pipeline o herramienta consuma la recomendación sin importar el lenguaje.
+

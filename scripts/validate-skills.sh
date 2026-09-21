@@ -80,3 +80,4 @@ fi
 
 echo ""
 echo "Todas las skills han pasado la validación exitosamente."
+
