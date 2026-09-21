@@ -1,19 +1,32 @@
-# Protocolo SDD: Instrucciones Mandatorias para Cursor
+# ==============================================================================
+# SDD PROTOCOL: MANDATORY IN-CONTEXT GUARDRAILS FOR CURSOR
+# ==============================================================================
+# Este archivo es inyectado automáticamente en cada conversación de Cursor.
+# Como agente de IA, DEBES cumplir estas directivas de forma estricta.
 
-Este repositorio opera bajo el **Protocolo de Desarrollo Guiado por Especificaciones (SDD)** definido en `AGENTS.md`.
+## 🛑 PROTOCOLO DE INICIO OBLIGATORIO (Zero-Tolerance)
+Antes de generar cualquier solución técnica o escribir código:
 
-## Reglas Inquebrantables de Ejecución
-1. **SSoT**: La fuente única de verdad es `AGENTS.md` y `CONSTITUCION.md`.
-2. **Jerarquía de Precedencia**:
-   - 1. Integridad de Dominio (no corromper datos maestros).
-   - 2. Atomicidad (toda escritura en base de datos es transaccional).
-   - 3. Economía de Contexto (archivos concisos, código modular).
-3. **Concurrencia**:
-   - Antes de modificar código en un módulo, ejecuta o solicita ejecutar:
-     `./sdd lock "<modulo>" "<tarea>"`
-   - Al finalizar la tarea, ejecuta o solicita ejecutar:
+1. **DECLARACIÓN DE ROL**: Inicia tu respuesta identificando tu rol y modo:
+   `[SDD: Agent-<Arch|Dev|Sec|DB|Audit|KB> | Modo: <VALIDATE|GENERATE|EXPLAIN|ARCH-REVIEW>]`
+
+2. **CONCURRENCIA (SESSION_LOCK)**:
+   - Antes de modificar cualquier archivo de código o esquema, ejecuta en terminal:
+     `./sdd lock "<modulo>" "<tarea corta>"`
+   - Al concluir tu trabajo con éxito, ejecuta:
      `./sdd unlock`
-4. **Atribución de IA**:
-   - Todo bloque de código, función o migración generada o modificada debe contener el comentario `// @ai-gen` o `/* @ai-gen */` (Regla `AI-ATTR-01`).
-5. **Cero Secretos**: Prohibido hardcodear contraseñas, claves o tokens (`SEC-SECRETS-01`).
-6. **Verificación**: Todo cambio debe pasar `./sdd check` antes de considerarse completo.
+
+3. **MARCADO OBLIGATORIO DE CÓDIGO IA (Regla AI-ATTR-01)**:
+   - Todo archivo, función, bloque o migración que crees o modifiques DEBE llevar:
+     `// @ai-gen` o `/* @ai-gen */` en su cabecera.
+   - El pre-commit hook de Git REBOTARÁ cualquier commit que omita esta marca.
+
+4. **INVARIANTES DURAS DE ARQUITECTURA**:
+   - **Persistencia (D1)**: Toda mutación de BD debe ser transaccional (BEGIN/COMMIT). Prohibido `DELETE` físico sin soft-delete (`deleted_at`). Usar identificadores temporales (UUIDv7), nunca autoincrementales predecibles.
+   - **Seguridad (D2)**: Prohibido hardcodear credenciales, API keys o tokens (`SEC-SECRETS-01`). Sanitizar entradas en la frontera.
+   - **Calidad (D3)**: Cero tipos `any` inseguros. Todo código nuevo debe acompañarse de sus pruebas unitarias.
+
+5. **VERIFICACIÓN FINAL**:
+   - Antes de dar una tarea por terminada, corre:
+     `./sdd check`
+   - Si `./sdd check` falla, estás OBLIGADO a corregir los defectos antes de entregar la respuesta.

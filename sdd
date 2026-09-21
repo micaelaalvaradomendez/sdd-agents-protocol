@@ -257,6 +257,47 @@ cmd_validate_skills() {
   fi
 }
 
+cmd_scan_secrets() {
+  echo "Escaneando ausencia de credenciales o secretos expuestos (SEC-SECRETS-01)..."
+  if git -C "$ROOT_DIR" rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+    local staged_files
+    staged_files=$(git -C "$ROOT_DIR" diff --cached --name-only 2>/dev/null || true)
+    if [[ -z "$staged_files" ]]; then
+      staged_files=$(git -C "$ROOT_DIR" diff --name-only 2>/dev/null || true)
+    fi
+    if [[ -n "$staged_files" ]]; then
+      while IFS= read -r file; do
+        if [[ -f "$ROOT_DIR/$file" ]]; then
+          if grep -iE "(ghp_[a-zA-Z0-9]{36}|-----BEGIN (RSA|EC|OPENSSH|PGP) PRIVATE KEY-----)" "$ROOT_DIR/$file" >/dev/null 2>&1; then
+            echo -e "${RED}❌ [SEGURIDAD] Se detectó un secreto o clave privada en: $file${NC}" >&2
+            return 1
+          fi
+        fi
+      done <<< "$staged_files"
+    fi
+  fi
+  echo -e "${GREEN}✅ Cero secretos detectados.${NC}"
+}
+
+cmd_scan_ai_attribution() {
+  echo "Verificando atribución obligatoria // @ai-gen en archivos de código (AI-ATTR-01)..."
+  if git -C "$ROOT_DIR" rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+    local code_files
+    code_files=$(git -C "$ROOT_DIR" diff --cached --name-only --diff-filter=ACMR 2>/dev/null | grep -E '\.(go|ts|tsx|js|jsx|py|rs|php)$' || true)
+    if [[ -n "$code_files" ]]; then
+      while IFS= read -r file; do
+        if [[ -f "$ROOT_DIR/$file" ]]; then
+          if ! grep -q -E "(@ai-gen)" "$ROOT_DIR/$file"; then
+            echo -e "${RED}❌ [AI-ATTR-01] El archivo de código '$file' carece de la marca '// @ai-gen'.${NC}" >&2
+            return 1
+          fi
+        fi
+      done <<< "$code_files"
+    fi
+  fi
+  echo -e "${GREEN}✅ Atribución de código verificada.${NC}"
+}
+
 cmd_check() {
   echo -e "${CYAN}Ejecutando verificación integral SDD...${NC}"
   cmd_validate_skills
@@ -270,6 +311,14 @@ cmd_check() {
       exit 1
     fi
   fi
+
+  echo ""
+  cmd_scan_secrets
+
+  echo ""
+  cmd_scan_ai_attribution
+
+  echo ""
   echo -e "${GREEN}✅ Verificación exitosa. Repositorio 100% en regla.${NC}"
 }
 
