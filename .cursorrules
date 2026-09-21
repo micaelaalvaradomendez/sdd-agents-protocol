@@ -1,0 +1,19 @@
+# Protocolo SDD: Instrucciones Mandatorias para Cursor
+
+Este repositorio opera bajo el **Protocolo de Desarrollo Guiado por Especificaciones (SDD)** definido en `AGENTS.md`.
+
+## Reglas Inquebrantables de Ejecución
+1. **SSoT**: La fuente única de verdad es `AGENTS.md` y `CONSTITUCION.md`.
+2. **Jerarquía de Precedencia**:
+   - 1. Integridad de Dominio (no corromper datos maestros).
+   - 2. Atomicidad (toda escritura en base de datos es transaccional).
+   - 3. Economía de Contexto (archivos concisos, código modular).
+3. **Concurrencia**:
+   - Antes de modificar código en un módulo, ejecuta o solicita ejecutar:
+     `./sdd lock "<modulo>" "<tarea>"`
+   - Al finalizar la tarea, ejecuta o solicita ejecutar:
+     `./sdd unlock`
+4. **Atribución de IA**:
+   - Todo bloque de código, función o migración generada o modificada debe contener el comentario `// @ai-gen` o `/* @ai-gen */` (Regla `AI-ATTR-01`).
+5. **Cero Secretos**: Prohibido hardcodear contraseñas, claves o tokens (`SEC-SECRETS-01`).
+6. **Verificación**: Todo cambio debe pasar `./sdd check` antes de considerarse completo.

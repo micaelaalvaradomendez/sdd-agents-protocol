@@ -117,7 +117,7 @@ El ciclo operativo estándar para cualquier interacción con agentes se ejecuta 
 ```
 
 1. **Paso 1 — Init (Alineación)**:
-   - Registrar la tarea activa en `SESSION_LOCK.md`.
+   - Registrar la tarea activa con `./sdd lock "<modulo>" "<tarea>"`.
    - Declarar explícitamente el `AgentID` asumido, modo operativo y skills primarias activadas.
 
 2. **Paso 2 — Discovery (Acceso a Conocimiento)**:
@@ -129,14 +129,14 @@ El ciclo operativo estándar para cualquier interacción con agentes se ejecuta 
    - Priorizar integridad sobre inmediatez.
    - Asegurar transaccionalidad e idempotencia en modificaciones.
    - Marcar bloques modificados con `// @ai-gen`.
-   - Verificar Quality Gates del modo en curso.
+   - Verificar Quality Gates del modo en curso con `./sdd check`.
 
 4. **Paso 4 — Closing (Cierre y Loop de Conocimiento)**:
-   - *Decisión*: Si la solución estableció un nuevo estándar o excepción, redactar un nuevo ADR en `DECISIONS/` y actualizar `DECISIONS-INDEX.md`.
+   - *Decisión*: Si la solución estableció un nuevo estándar o excepción, redactar un nuevo ADR con `./sdd adr "<Título>"`.
    - *Skills*: Si se detectaron patrones reutilizables o correcciones, actualizar las skills afectadas en `skills/`.
-   - *Constitución*: Ejecutar `./scripts/sync-constitution.sh` si hubo cambios en skills.
+   - *Constitución*: Ejecutar `./sdd sync` si hubo cambios en skills.
    - *Atlas*: Actualizar diagramas o mapas si cambió la topología.
-   - *Limpieza*: Liberar el registro en `SESSION_LOCK.md`.
+   - *Limpieza*: Liberar el registro con `./sdd unlock`.
 
 ---
 

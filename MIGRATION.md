@@ -12,52 +12,42 @@ Instrucciones prácticas paso a paso para que cualquier equipo de ingeniería ad
 
 ## 2. Paso a Paso de Adopción
 
-### Paso 1: Ejecutar el Script de Bootstrap
-Desde el repositorio `sdd-agents-protocol`, ejecute el instalador indicando la ruta de su proyecto objetivo:
+### Paso 1: Ejecutar el Inicializador SDD
+Desde el repositorio `sdd-agents-protocol`, ejecute el comando de inicialización indicando la ruta de su proyecto objetivo:
 
 ```bash
-./scripts/bootstrap.sh --target /ruta/a/mi-proyecto --project "mi-proyecto" --stack "Go/PostgreSQL"
+./sdd init /ruta/a/mi-proyecto
 ```
 
-El script creará automáticamente el árbol de directorios estándar (`.github/`, `contexto/`, `skills/`, `agentes/`, `RULES/`, `DECISIONS/`, `MAPS/`, `workflows/`, `checklists/`, `scripts/`) y copiará los archivos normativos base.
+El script configurará automáticamente:
+- El árbol de directorios estándar.
+- El ejecutable `./sdd` en la raíz del proyecto.
+- Los auto-conectores para IAs: `.cursorrules`, `CLAUDE.md` y `.github/copilot-instructions.md`.
+- El contexto base en `contexto/CONTEXTO.md`.
+- Las matrices agnósticas en `data/`.
 
 ---
 
 ### Paso 2: Personalizar el Contexto de Dominio
-Acceda a la carpeta `contexto/` del proyecto y complete los archivos fundamentales:
-1. `contexto/01-negocio.md`: Resuma la misión, las entidades maestras y los casos de uso principales.
-2. `contexto/02-datos-sensibles.md`: Identifique qué campos contienen información personal (PII) o requieren cifrado.
+Abra el archivo unificado `contexto/CONTEXTO.md` y adapte:
+1. Misión y entidades maestras del negocio.
+2. Políticas de datos sensibles (PII).
+3. Integraciones externas y contratos de red.
 
 ---
 
-### Paso 3: Adaptar las Reglas Duras de Persistencia
-En `RULES/DB-RULES.md`, ajuste los requisitos a su motor de base de datos específico (PostgreSQL, MySQL, SQLite, MongoDB):
-- Verifique si el proyecto cuenta con un archivo central de manifiesto de tablas o declare la ruta del esquema principal.
-- Confirme la política de claves primarias (UUIDv7 recomendada).
-
----
-
-### Paso 4: Validar y Generar la Primera Constitución
-Ejecute las herramientas de sincronización en su proyecto:
+### Paso 3: Validar y Activar Pre-commit Hook
+En el repositorio destino:
 
 ```bash
 cd /ruta/a/mi-proyecto
-chmod +x scripts/*.sh
 
-# Validar que las habilidades iniciales cumplan el estándar
-./scripts/validate-skills.sh
+# Verificar que todo esté en verde
+./sdd check
 
-# Generar la constitución de habilidades viva
-./scripts/sync-constitution.sh
+# Instalar el pre-commit hook de Git
+./sdd hook install
 ```
 
----
-
-### Paso 5: Activar la Validación en Integración Continua (CI)
-Asegúrese de que `.github/workflows/lint-skills.yml` esté activo en su repositorio de GitHub. A partir de este momento, cualquier pull request que introduzca habilidades rotas o desincronice `CONSTITUCION.md` será bloqueado automáticamente.
-
----
-
-### Paso 6: Instruir a su Entorno de Desarrollo (IDE)
-Copie o enlace `.github/copilot-instructions.md` para que GitHub Copilot, Cursor o Antigravity sigan el protocolo de inicio obligatorio de 5 pasos en cada conversación técnica.
+A partir de este momento, cualquier agente o desarrollador que intente hacer un commit que viole invariantes o desincronice la constitución será interceptado automáticamente por Git.
 
