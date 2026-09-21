@@ -59,8 +59,6 @@ cat <<EOF >> "$OUTPUT_FILE"
 1. **Obligatoriedad**: Todo agente debe consultar este índice durante la fase *Discovery* del SOP v2.
 2. **Sincronización**: Toda modificación o creación de una skill exige ejecutar \`./scripts/sync-constitution.sh\`.
 3. **Total de habilidades indexadas**: $count
-
-*Última regeneración: $(date -u +"%Y-%m-%d %H:%M:%S UTC")*
 EOF
 
 echo "CONSTITUCION.md regenerada con éxito. Habilidades indexadas: $count."

@@ -181,3 +181,4 @@ Ninguna contribución producida por un agente se considera terminada hasta satis
 - **Topografía y Mapas**: `MAPS/`
 - **Automatizaciones**: `scripts/`
 - **Documentación Conceptual**: `docs/`
+

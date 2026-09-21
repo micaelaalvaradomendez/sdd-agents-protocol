@@ -48,3 +48,4 @@ Al operar en módulos de este dominio, el agente debe:
 - Cargar `Agent-DB` o `Agent-Dev`.
 - Asegurar que toda transferencia se envuelva en `BEGIN` / `COMMIT` con nivel de aislamiento serializable o bloqueo pesimista en base de datos.
 - Prohibir terminantemente el uso de tipos de coma flotante (`float32`/`float64`) para representar dinero; exigir `Decimal` o enteros en centavos.
+

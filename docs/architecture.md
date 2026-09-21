@@ -46,3 +46,4 @@ Garantiza que el aprendizaje derivado de cada interacción técnica no se pierda
 
 ### Eje B: Auditoría, Control y Concurrencia
 Gobierna la interacción multi-agente mediante el registro atómico en `SESSION_LOCK.md`, la obligatoriedad de la marca de trazabilidad `// @ai-gen` y la verificación continua mediante pipelines de CI (`lint-skills.yml`).
+

@@ -63,3 +63,4 @@ Ejemplo de reporte emitido:
 - [ ] Anti-patrones contrastados contra `ANTI-PATTERNS.md`.
 - [ ] Tag `@ai-gen` verificado en archivos intervenidos.
 - [ ] Reporte entregado con IDs y soluciones unívocas.
+

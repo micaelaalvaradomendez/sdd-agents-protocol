@@ -54,3 +54,4 @@ Salida: Creación de ADR en DECISIONS/ y actualización de DECISIONS-INDEX.md y 
 
 ## 13. Historial de Cambios (Changelog)
 - **v1.0.0 (2026-09-20)**: Definición del perfil de gestión del conocimiento.
+

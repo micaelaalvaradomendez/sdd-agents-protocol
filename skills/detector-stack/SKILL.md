@@ -14,10 +14,11 @@ Esta habilidad permite a los agentes inspeccionar de forma agnóstica cualquier 
 
 ## 2. Entradas Requeridas
 - **Ruta Raíz del Repositorio**: Directorio base a explorar.
-- **Archivos Indicadores**: Listado de archivos clave de configuración.
+- **Matriz de Detección Agnóstica**: Archivo `data/tech-stack-detection.json`.
 
 ## 3. Proceso Operativo (Paso a Paso)
-1. **Inspección de Archivos Indicadores**:
+1. **Ejecución Automática**: Invocar `./scripts/sdd detect [ruta]` o inspeccionar `data/tech-stack-detection.json`.
+2. **Inspección de Archivos Indicadores**:
    - `package.json` / `pnpm-lock.yaml` -> Ecosistema JavaScript / TypeScript / Node.js.
    - `go.mod` / `go.sum` -> Ecosistema Go.
    - `requirements.txt` / `pyproject.toml` / `Pipfile` -> Ecosistema Python.
@@ -75,3 +76,4 @@ find . -maxdepth 2 -name "package.json" -o -name "go.mod" -o -name "pyproject.to
 - [ ] Archivos indicadores rastreados.
 - [ ] Dependencias primarias identificadas.
 - [ ] Payload JSON normalizado emitido.
+

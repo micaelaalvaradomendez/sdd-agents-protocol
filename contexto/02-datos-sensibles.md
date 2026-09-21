@@ -9,3 +9,4 @@
 ## 2. Políticas de Sanitización
 - Los logs deben utilizar filtros que reemplacen campos sensibles por `[REDACTED]`.
 - Las respuestas de error de API no deben filtrar trazas de pila (*stack traces*) internas en entornos públicos.
+

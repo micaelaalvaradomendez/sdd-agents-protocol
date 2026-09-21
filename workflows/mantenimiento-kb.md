@@ -18,3 +18,4 @@ Guía operativa para evitar el *knowledge drift* (desfase entre el código y la 
    - Si existen sesiones marcadas con `🔒 Bloqueado` con más de 24 horas de antigüedad sin actividad, cambiar su estado a `⚠️ Desbloqueo Forzado (Timeout)` tras confirmar que no hay procesos corriendo.
 4. **Verificación de Enlaces Rotos**:
    - Revisar que los enlaces relativos entre `AGENTS.md`, `DECISIONS-INDEX.md`, `RULES/` y `skills/` apunten a archivos existentes.
+

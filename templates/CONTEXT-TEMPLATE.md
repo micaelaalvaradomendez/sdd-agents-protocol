@@ -21,3 +21,4 @@ Este documento sirve como modelo para proveer a los agentes de contexto de negoc
 
 ## 5. Integraciones Críticas
 - Servicios externos y contratos de comunicación.
+

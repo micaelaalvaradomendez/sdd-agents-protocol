@@ -41,3 +41,4 @@ flowchart TD
 1. **Regla de No Repetición**: Si un agente tuvo que corregir un error dos veces, el patrón de corrección debe incorporarse como una regla dura en `RULES/` o un anti-patrón en `ANTI-PATTERNS.md`.
 2. **Sincronización Mandatoria**: Ningún PR se aprueba si modifica archivos en `skills/` sin haber ejecutado `./scripts/sync-constitution.sh`.
 3. **Registro Histórico Permanente**: Las decisiones arquitectónicas son inmutables; no se borran, se superan formalmente mediante un nuevo ADR con referencia al anterior.
+

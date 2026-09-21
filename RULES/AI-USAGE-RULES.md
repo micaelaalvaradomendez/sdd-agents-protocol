@@ -21,3 +21,4 @@
 > - **Exige**: Verificar la existencia real en el ecosistema y manifiesto de dependencias (`package.json`, `go.mod`, etc.) de cualquier biblioteca o método propuesto.
 > - **Prohíbe**: Invocar métodos inventados o sugerir dependencias externas no declaradas sin aprobación explícita mediante ADR.
 > - **Acción ante violación**: Falla inmediata de compilación y corrección requerida.
+

@@ -72,3 +72,4 @@ fi
 
 echo "| $TODAY | [$TITLE](DECISIONS/$FILENAME) | Propuesto | Nueva decisión de arquitectura |" >> "$INDEX_FILE"
 echo "Actualizado índice en $INDEX_FILE"
+

@@ -29,3 +29,4 @@
 > - **Exige**: Incluir columna `deleted_at TIMESTAMPTZ` (o equivalente nulo) en toda tabla transaccional o de negocio que admita bajas.
 > - **Prohíbe**: La ejecución de sentencias `DELETE` directas sobre datos operativos sin política formal de purga documentada mediante ADR.
 > - **Acción ante violación**: Revertir la consulta destructiva e implementar el flag de soft-delete.
+

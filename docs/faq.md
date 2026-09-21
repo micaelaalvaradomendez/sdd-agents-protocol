@@ -28,3 +28,4 @@ A través de la política de exclusión mutua documentada en `SESSION_LOCK.md`. 
 
 ### 5. ¿Qué significa la etiqueta `// @ai-gen` y por qué es obligatoria?
 Es una marca de trazabilidad técnica (Regla `AI-ATTR-01`). Permite a los equipos de ingeniería, auditores de seguridad y herramientas automatizadas diferenciar el código generado o asistido por IA del código escrito manualmente, facilitando análisis de calidad y revisiones de propiedad intelectual.
+

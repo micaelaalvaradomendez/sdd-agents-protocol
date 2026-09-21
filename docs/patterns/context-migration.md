@@ -42,3 +42,4 @@ Clasificar cada segmento en la estructura normalizada de `contexto/`:
 
 ### Fase 4: Vinculación con Perfiles de Agentes
 Configurar en cada archivo de `agentes/*.md` cuáles de estos archivos de contexto son mandatorios para su especialidad, evitando la carga indiscriminada del resto.
+

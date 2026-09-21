@@ -30,3 +30,4 @@ Explicación detallada de la opción seleccionada. Justificación sustentada en 
 
 ## 5. Validación y Calidad
 Cómo se verificará la adopción de esta decisión en código y pruebas automatizadas.
+

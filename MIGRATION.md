@@ -60,3 +60,4 @@ Asegúrese de que `.github/workflows/lint-skills.yml` esté activo en su reposit
 
 ### Paso 6: Instruir a su Entorno de Desarrollo (IDE)
 Copie o enlace `.github/copilot-instructions.md` para que GitHub Copilot, Cursor o Antigravity sigan el protocolo de inicio obligatorio de 5 pasos en cada conversación técnica.
+

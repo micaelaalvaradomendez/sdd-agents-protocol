@@ -15,12 +15,12 @@ Esta habilidad ejecuta un ciclo completo de auditoría y remediación de vulnera
 ## 2. Entradas Requeridas
 - **Manifiesto del Proyecto**: Archivo de dependencias (`package.json`, `go.mod`, `requirements.txt`, etc.).
 - **Código o Configuración Objetivo**: Ficheros fuente o manifiestos de despliegue a inspeccionar.
-- **Base de Firmas / Vulnerabilidades**: Catálogo de CVEs o advisory de seguridad.
+- **Catálogo de Patrones de Vulnerabilidad**: Archivo `data/vulnerability-search-patterns.json`.
 
 ## 3. Proceso Operativo (Paso a Paso)
 1. **Fase de Detección**:
    - Escanear dependencias y contrastar versiones contra bases de vulnerabilidades conocidas.
-   - Analizar patrones de código estático en busca de inyecciones SQL, XSS, deserialización insegura o exposición de endpoints sin autenticación.
+   - Contrastar el código fuente contra las firmas y expresiones regulares definidas en `data/vulnerability-search-patterns.json` para el stack detectado.
 2. **Fase de Diagnóstico**:
    - Asignar severidad (Crítica, Alta, Media, Baja) y vector de impacto CVSS.
    - Determinar si la vulnerabilidad es explotable en el contexto específico de la aplicación.
@@ -67,3 +67,4 @@ Detección y saneamiento de inyección de cabeceras HTTP:
 - [ ] Parche generado sin efectos secundarios colaterales.
 - [ ] Pruebas unitarias de regresión superadas.
 - [ ] Etiquetado `// @ai-gen` aplicado.
+

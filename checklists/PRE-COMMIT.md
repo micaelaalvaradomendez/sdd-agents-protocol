@@ -9,3 +9,4 @@ Lista de control ejecutable antes de realizar cualquier `git commit` en reposito
 - [ ] **Pruebas Automatizadas**: Las pruebas unitarias locales corren y pasan al 100%.
 - [ ] **Anti-Patrones**: Sin violaciones críticas de `ANTI-PATTERNS.md` (no hay N+1 evidentes, ni consultas destructivas directas).
 - [ ] **Economía de Contexto**: Los archivos modificados se mantienen dentro de límites razonables de longitud y cohesión.
+

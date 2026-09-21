@@ -17,3 +17,4 @@ Toda regla dura debe documentarse bajo el bloque de alerta `[!CAUTION]` con el s
 - `DB-RULES.md`: Invariantes de persistencia, manifiesto de tablas y transacciones.
 - `SECURITY-RULES.md`: Políticas de secretos, autenticación y defensa perimetral.
 - `AI-USAGE-RULES.md`: Atribución de código, contexto mandatorio y gobierno de IA.
+

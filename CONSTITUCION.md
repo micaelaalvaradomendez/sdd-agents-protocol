@@ -24,5 +24,3 @@
 1. **Obligatoriedad**: Todo agente debe consultar este índice durante la fase *Discovery* del SOP v2.
 2. **Sincronización**: Toda modificación o creación de una skill exige ejecutar `./scripts/sync-constitution.sh`.
 3. **Total de habilidades indexadas**: 5
-
-*Última regeneración: 2026-09-20 23:53:52 UTC*

@@ -34,3 +34,4 @@ Durante la ejecución:
   1. Si hubo decisiones nuevas, redactar ADR en `DECISIONS/`.
   2. Si hubo mejoras a skills, actualizar `skills/` y correr `./scripts/sync-constitution.sh`.
   3. Liberar el bloqueo en `SESSION_LOCK.md`.
+

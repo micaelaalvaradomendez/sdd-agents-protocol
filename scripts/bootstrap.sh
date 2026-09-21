@@ -96,3 +96,4 @@ fi
 echo ""
 echo "Protocolo SDD inicializado correctamente en $TARGET_DIR."
 echo "Siguiente paso: configurar contexto/01-negocio.md y ejecutar ./scripts/sync-constitution.sh"
+

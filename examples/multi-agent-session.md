@@ -44,3 +44,4 @@ Dos tareas simultáneas ingresan a la cola de trabajo:
 2. Consulta el nuevo manifiesto actualizado por `Agent-DB`.
 3. Implementa el endpoint consumiendo la tabla particionada con soporte de filtros temporales óptimos.
 4. Libera su propio bloqueo tras pasar los tests en verde.
+

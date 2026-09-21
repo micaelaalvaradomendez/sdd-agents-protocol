@@ -53,3 +53,4 @@ Agente: ...
 
 ## 13. Historial de Cambios (Changelog)
 - **v1.0.0 (YYYY-MM-DD)**: Creación inicial del perfil del agente.
+

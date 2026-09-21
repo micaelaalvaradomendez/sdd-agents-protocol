@@ -21,3 +21,4 @@
 > - **Exige**: Validar y sanitizar todo payload entrante mediante esquemas tipados rígidos (Zod, Pydantic, Struct tags) en la frontera del sistema.
 > - **Prohíbe**: Concatenación directa de strings en consultas SQL, comandos de shell o intérpretes de plantillas.
 > - **Acción ante violación**: Rechazar el PR de inmediato.
+

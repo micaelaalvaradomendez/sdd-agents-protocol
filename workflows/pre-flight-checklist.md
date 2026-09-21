@@ -16,3 +16,4 @@ Garantizar que ningún código generado por IA degrade la calidad arquitectónic
 8. **Fixtures y Seeds**: Si se crearon nuevas entidades, se proveyeron fixtures o migraciones de seed correspondientes.
 9. **Respeto a Zonas Core**: Ninguna modificación no autorizada sobre el núcleo del sistema o middlewares de seguridad.
 10. **Pruebas de Lógica al 100%**: Cobertura de tests unitarios sobre toda la lógica de negocio introducida.
+

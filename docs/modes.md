@@ -52,3 +52,4 @@ Para evitar la ambigüedad en la ejecución y asegurar que los agentes actúen c
   - Redacta un borrador formal de ADR.
 - **Quality Gates**:
   - La sesión concluye obligatoriamente con la creación o actualización de un archivo en `DECISIONS/` mediante `./scripts/new-decision.sh`.
+
