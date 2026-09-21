@@ -1,8 +1,4 @@
 # Spec-Driven Development (SDD) Protocol for Supervised AI Agents
-[![Lint Skills & Constitution](https://github.com/micaelaalvaradomendez/sdd-agents-protocol/actions/workflows/lint-skills.yml/badge.svg)](https://github.com/micaelaalvaradomendez/sdd-agents-protocol/actions/workflows/lint-skills.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![SDD Standard](https://img.shields.io/badge/Standard-SDD--v1.0-emerald.svg)](AGENTS.md)
-[![SDS-500 Compliant](https://img.shields.io/badge/Context-SDS--500-orange.svg)](docs/architecture.md)
 
 > **Un marco de ingeniería auditable para transformar asistentes de inteligencia artificial en ejecutores técnicos supervisados, gobernados por especificaciones formales, invariantes duras y un círculo virtuoso de conocimiento.**
 
